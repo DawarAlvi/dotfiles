@@ -54,14 +54,16 @@ pacman_apps=(
     xorg
     xorg-xinit
     alacritty
+    tar
     unzip
-    untar
     unrar
     xarchiver
     ntfs-3g
+    bluez
     acpilight
     acpid
     pulseaudio
+    pavucontrol
     maim
     rofi
     feh
@@ -71,6 +73,7 @@ pacman_apps=(
     thunar-media-tags-plugin
     thunar-volman
     tumbler
+    xfce4-power-manager
     lxappearance
     openssh
     github-cli
@@ -79,7 +82,7 @@ pacman_apps=(
 
 aur_apps=(
     awesome-git
-    picom-jonaburg
+    picom-jonaburg-git
     brave-git
     thunar-shares-plugin
 )
