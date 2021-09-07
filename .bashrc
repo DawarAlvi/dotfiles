@@ -10,3 +10,5 @@ PS1='[\u@\h \W]\$ '
 
 alias v='nvim'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+export BROWSER=/usr/bin/brave

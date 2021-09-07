@@ -18,7 +18,7 @@ cd ~
 echo "Setting up bare git repo and downloading dotfiles"
 echo " "
 
-git clone --bare https://github.com/DawarAlvi/dots $HOME/.cfg
+git clone --bare https://github.com/DawarAlvi/dotfiles $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
@@ -72,7 +72,9 @@ pacman_apps=(
     thunar-volman
     tumbler
     lxappearance
+    openssh
     github-cli
+    xdg-utils
 )
 
 aur_apps=(
