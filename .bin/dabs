@@ -72,6 +72,7 @@ pacman_apps=(
     thunar-volman
     tumbler
     lxappearance
+    github-cli
 )
 
 aur_apps=(
