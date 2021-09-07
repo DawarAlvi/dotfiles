@@ -1,0 +1,54 @@
+{
+   "checksum": "c2ec09072708622961a58cda0009196c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13275446411744462",
+            "guid": "ccc79fcf-c448-40ee-aead-c233f1db1acc",
+            "id": "5",
+            "name": "How to store dotfiles | Atlassian Git Tutorial",
+            "type": "url",
+            "url": "https://www.atlassian.com/git/tutorials/dotfiles"
+         }, {
+            "date_added": "13275446418217207",
+            "guid": "ae73c751-90ac-4ee5-8bb7-158dd51aae4b",
+            "id": "6",
+            "name": "LARBS—Luke's Auto-Rice Bootstrapping Scripts",
+            "type": "url",
+            "url": "https://larbs.xyz/"
+         }, {
+            "date_added": "13275446430681386",
+            "guid": "5ade607e-953b-4757-bdd6-e51fd36f2e48",
+            "id": "7",
+            "name": "GitHub",
+            "type": "url",
+            "url": "https://github.com/"
+         } ],
+         "date_added": "13275441190734217",
+         "date_modified": "13275446430681386",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13275441190734221",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13275441190734223",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

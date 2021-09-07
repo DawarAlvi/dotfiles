@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+
+# Dawar's Auto Bootstrapping Script (DABS)
+# by Syed Dawar Alvi <github.com/dawaralvi>
+
+
+echo "Welcome to Dawar's Auto Bootstrapping Script (DABS)."
+echo " "
+echo "Installs yay AUR Helper, pulls dotfiles, and installs packages."
+echo " "
+echo "Press Any Key to Continue..."
+read y
+
+
+cd ~
+
+
+echo "Setting up bare git repo and downloading dotfiles"
+echo " "
+
+git clone --bare https://github.com/DawarAlvi/dots $HOME/.cfg
+function config {
+   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+}
+mkdir -p config-backup
+config checkout
+if [ $? = 0 ]; then
+  echo "Checked out config.";
+  else
+    echo "Backing up pre-existing dot files.";
+    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} config-backup/{}
+fi;
+config checkout
+config config status.showUntrackedFiles no
+
+
+#Update fonts cache
+fc-cache -v
+
+
+#
+xrdb -merge ~/.Xresources
+
+
+#Install yay (AUR Helper)
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+
+#Install Applications
+pacman_apps=(
+    xorg
+    xorg-xinit
+    alacritty
+    unzip
+    untar
+    unrar
+    xarchiver
+    ntfs-3g
+    acpilight
+    acpid
+    pulseaudio
+    maim
+    rofi
+    feh
+    ranger
+    thunar
+    thunar-archive-plugin
+    thunar-media-tags-plugin
+    thunar-volman
+    tumbler
+    lxappearance
+)
+
+aur_apps=(
+    awesome-git
+    picom-jonaburg
+    brave-git
+    thunar-shares-plugin
+)
+
+echo "Installing packages..."
+echo " "
+sudo pacman -S --needed ${pacman_apps[@]} 
+
+echo "Installing AUR packages..."
+echo " "
+yay -S --needed ${aur_apps[@]}
+
