@@ -17,6 +17,7 @@ local naughty = require("naughty")
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -165,8 +166,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            require("battery-widget") {},
             mytextclock,
+            wibox.widget.systray(),
             s.mylayoutbox,
         },
     }
@@ -197,6 +199,11 @@ awful.keyboard.append_global_keybindings({
         exe_callback = awful.util.eval,
         history_path = awful.util.get_cache_dir() .. "/history_eval"
     }                                                                                               end, {description = "lua execute prompt", group = "awesome"}),
+
+    -- Custom keys
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn.with_shell("pactl set-sink-volume 0 +3275") end),
+    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn.with_shell("pactl set-sink-volume 0 -3275") end),
+    awful.key({}, "XF86AudioMute",        function() awful.spawn.with_shell("pactl set-sink-mute 0 toggle") end),
 })
 
 -- Tags related keybindings
@@ -468,3 +475,4 @@ end)
 
 
 -- Autostart Programs
+--pasystray
