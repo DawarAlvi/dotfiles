@@ -4,10 +4,19 @@
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
 	<unique-id>1630973937867991-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
+	<command> $TERMINAL --working-directory %f</command>
+	<description>Open the default terminal</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
+</action>
+<action>
+	<icon>preferences-desktop-wallpaper</icon>
+	<name>Set as wallpaper</name>
+	<unique-id>1631403917518050-1</unique-id>
+	<command>cp %f ~/.wal.jpg</command>
+	<description>Set selected image as wallpaper</description>
+	<patterns>*</patterns>
+	<image-files/>
 </action>
 </actions>

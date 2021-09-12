@@ -204,6 +204,10 @@ awful.keyboard.append_global_keybindings({
     awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn.with_shell("pactl set-sink-volume 0 +3275") end),
     awful.key({}, "XF86AudioLowerVolume", function() awful.spawn.with_shell("pactl set-sink-volume 0 -3275") end),
     awful.key({}, "XF86AudioMute",        function() awful.spawn.with_shell("pactl set-sink-mute 0 toggle") end),
+
+    -- Custom Programs
+    awful.key({modkey,}, "space", function() awful.spawn.with_shell("rofi-apps") end),
+
 })
 
 -- Tags related keybindings
@@ -273,9 +277,7 @@ awful.keyboard.append_global_keybindings({
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(1)                end,
               {description = "select previous", group = "layout"}),
 })
 
@@ -448,6 +450,18 @@ ruled.client.connect_signal("request::rules", function()
         },
         properties = { floating = true }
     }
+
+    -- Plank
+    ruled.client.append_rule {
+        rule_any = {
+            name = {
+                "plank"
+            }
+        },
+        properties = {
+            ontop = true
+        }
+    }
 end)
 -- }}}
 
@@ -472,7 +486,3 @@ end)
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
-
-
--- Autostart Programs
---pasystray

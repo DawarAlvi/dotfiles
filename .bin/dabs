@@ -59,6 +59,7 @@ pacman_apps=(
     unrar
     xarchiver
     ntfs-3g
+    gvfs
     bluez
     acpilight
     acpid
@@ -78,6 +79,9 @@ pacman_apps=(
     openssh
     github-cli
     xdg-utils
+    xrandr
+    neofetch
+    htop
 )
 
 aur_apps=(
@@ -85,6 +89,7 @@ aur_apps=(
     picom-jonaburg-git
     brave-git
     thunar-shares-plugin
+    systemd-numlockontty
 )
 
 echo "Installing packages..."
@@ -95,3 +100,17 @@ echo "Installing AUR packages..."
 echo " "
 yay -S --needed ${aur_apps[@]}
 
+# Touchpad
+sudo tee -a /etc/X11/xorg.conf.d/30-touchpad.conf > /dev/null <<EOT
+Section "InputClass"
+    Identifier "MyTouchpad"
+    MatchIsTouchpad "on"
+    Driver "libinput"
+    Option "Tapping" "on"
+EndSection
+EOT
+
+#Enable Services
+sudo systemctl enable acpid
+sudo systemctl enable NetworkManager
+sudo systemctl enable numLockOnTty.service
