@@ -61,6 +61,7 @@ pacman_apps=(
     ntfs-3g
     gvfs
     bluez
+    blueman
     acpilight
     acpid
     pulseaudio
@@ -113,4 +114,5 @@ EOT
 #Enable Services
 sudo systemctl enable acpid
 sudo systemctl enable NetworkManager
+sudo systemctl enable bluetooth.service
 sudo systemctl enable numLockOnTty.service

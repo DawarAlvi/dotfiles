@@ -53,6 +53,7 @@ XDG_SESSION_TYPE=x11
 picom &
 xfce4-power-manager &
 pulseaudio --start &
+blueman-applet &
 lxsession &
 numlockx on &
 
