@@ -3,6 +3,12 @@
 # Dawar's Auto Bootstrapping Script (DABS)
 # by Syed Dawar Alvi <github.com/dawaralvi>
 
+############################################################
+                   IMPORTANT NOTE: 
+THIS SCRIPT IN UNFINISHED AND IS IN A NON-FUNCTIONAL STATE. 
+                     DO NOT USE
+############################################################
+
 
 echo "Welcome to Dawar's Auto Bootstrapping Script (DABS)."
 echo " "
@@ -11,9 +17,7 @@ echo " "
 echo "Press Any Key to Continue..."
 read y
 
-
 cd ~
-
 
 echo "Setting up bare git repo and downloading dotfiles"
 echo " "
