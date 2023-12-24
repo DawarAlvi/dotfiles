@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/home/dwr/Apps/Postman/app/Postman %U
+Icon=postman
+Terminal=false
+Type=Application
+Categories=Development;

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=feh -Tdefault .
+Name=Feh Image Viewer
+Comment=Custom definition for feh -Tdefault
+Icon=accessories-image-viewer
+Path=
+Terminal=false
+StartupNotify=false

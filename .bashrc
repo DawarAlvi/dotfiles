@@ -4,7 +4,7 @@
 
 export TERMINAL=/usr/bin/alacritty
 export EDITOR=/usr/bin/nvim
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/brave
 
 export PATH="$HOME/.bin:$PATH"
 

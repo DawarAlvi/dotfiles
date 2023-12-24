@@ -9,7 +9,7 @@
  */
 configuration {
   show-icons:      true;
-  icon-theme: "Papirus";
+  icon-theme: "La Capitaine";
 }
 
 * {
@@ -19,8 +19,9 @@ configuration {
   yellow:     #f8c456;
   blue:       #6eaafb;
   mangenta:   #d886f3;
+  purple: #800080;
   cyan:       #6cdcf7;
-  emphasis:   #000000aa;	/*50536b (old)*/
+  emphasis:   #222222aa;
   text:       #dfdfdf;
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
@@ -29,7 +30,7 @@ configuration {
   spacing: 0;
   background-color: transparent;
 
-  font: "Knack Nerd Font 14";
+  font: "SF UI Display 14";
   text-color: @text;
 }
 
