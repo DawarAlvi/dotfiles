@@ -75,5 +75,5 @@ require("main.signals")
 
 -- Autostarts
 for _,app in pairs(RC.vars.autostarts) do
-    awful.util.spawn(app)
+    awful.spawn.with_shell(app)
 end
