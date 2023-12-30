@@ -50,10 +50,11 @@ RC.mainmenu = awful.menu({
     items = main.menu()
 }) -- in globalkeys
 
-RC.launcher = awful.widget.launcher({
+RC.launcher = wibox.container.margin(awful.widget.launcher({
     image = beautiful.awesome_icon,
     menu = RC.mainmenu
-})
+}))
+RC.launcher.right = 2
 menubar.utils.terminal = RC.vars.terminal
 
 -- Mouse and Key bindings
@@ -76,4 +77,36 @@ require("main.signals")
 -- Autostarts
 for _,app in pairs(RC.vars.autostarts) do
     awful.spawn.with_shell(app)
+end
+
+-- My test bar
+local enable_test_bar = false
+if enable_test_bar then
+    
+    local launcher = awful.widget.launcher({
+        image = beautiful.awesome_icon,
+        menu = RC.mainmenu
+    })
+    local clock = wibox.container.place(wibox.widget.textclock(" %a %b %d %I:%M %p"),"center", "center")
+
+    awful.screen.connect_for_each_screen(function(s)
+        s.bar = awful.wibar({
+            position = "bottom",
+            screen = s
+        })
+        s.bar:setup {
+            launcher,
+            layout = wibox.layout.stack,
+            {
+                layout = wibox.layout.flex.horizontal,
+                clock
+            },
+            {
+                layout = wibox.layout.fixed.horizontal,
+                launcher,
+            },
+            
+        }
+    end)
+
 end

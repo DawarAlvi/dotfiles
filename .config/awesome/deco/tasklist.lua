@@ -15,7 +15,7 @@ function _M.get()
     end), awful.button({}, 3, function()
         awful.menu.client_list({
             theme = {
-                width = 250
+                width = 400
             }
         })
     end), awful.button({}, 4, function()

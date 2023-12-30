@@ -3,6 +3,10 @@ local beautiful = require("beautiful")
 
 function set_wallpaper(s)
   -- Wallpaper
+  if not gears.filesystem.file_readable(beautiful.wallpaper) then
+    beautiful.wallpaper = require("themes."..RC.vars.theme..".theme").wallpaper_fallback
+  end
+
   if beautiful.wallpaper then
     local wallpaper = beautiful.wallpaper
     -- If wallpaper is a function, call it with the screen

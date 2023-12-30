@@ -5,7 +5,9 @@ local _M = {}
 function _M.get()
     local layouts = {
         awful.layout.suit.max,
-        awful.layout.suit.spiral.dwindle,
+        -- awful.layout.suit.spiral.dwindle,
+        -- awful.layout.suit.fair.horizontal,
+        awful.layout.suit.fair,
     }
 
     return layouts

@@ -9,7 +9,7 @@ local modkey = RC.vars.modkey
 local terminal = RC.vars.terminal
 local file_manager = RC.vars.file_manager
 local browser = RC.vars.browser
-local rofi_command = RC.vars.rofi_command
+local rofi_command = "rofi -modi 'drun' -show drun -theme $HOME/.config/rofi/" .. RC.vars.rofi_theme
 
 -- https://awesomewm.org/wiki/Global_Keybindings
 

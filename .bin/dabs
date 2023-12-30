@@ -57,23 +57,25 @@ makepkg -si
 pacman_apps=(
     xorg
     xorg-xinit
+    awesome
     alacritty
+    picom
     tar
     unzip
     unrar
     xarchiver
     ntfs-3g
     gvfs
-    bluez
-    blueman
     acpilight
     acpid
     pulseaudio
     pavucontrol
-    maim
+    bluez
+    blueman
+    github-cli
     rofi
     feh
-    ranger
+    maim
     thunar
     thunar-archive-plugin
     thunar-media-tags-plugin
@@ -82,19 +84,17 @@ pacman_apps=(
     xfce4-power-manager
     lxappearance
     openssh
-    github-cli
     xdg-utils
-    xrandr
+    numlockx
     neofetch
     htop
 )
 
 aur_apps=(
-    awesome-git
-    picom-jonaburg-git
     brave-git
     thunar-shares-plugin
     systemd-numlockontty
+    git-credential-oauth
 )
 
 echo "Installing packages..."
@@ -112,6 +112,7 @@ Section "InputClass"
     MatchIsTouchpad "on"
     Driver "libinput"
     Option "Tapping" "on"
+	Option "NaturalScrolling" "true"
 EndSection
 EOT
 
