@@ -26,6 +26,8 @@ theme.fg_focus                                  = theme.hl
 theme.fg_urgent                                 = theme.fg
 theme.fg_minimize                               = theme.fg .. 66
 
+theme.hotkeys_modifiers_fg = theme.fg
+
 theme.border_normal                             = theme.bg
 theme.border_focus                              = theme.hl
 theme.border_marked                             = theme.urgent 

@@ -8,6 +8,7 @@ local _M = {
     browser = "brave",
     rofi_theme = "TwoDark.rasi",
     modkey = "Mod4",
+    altkey = "Mod1",
     autostarts = {
         "nm-applet",
         "numlockx on",
