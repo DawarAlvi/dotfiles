@@ -28,14 +28,12 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = SF UI Display:style=Bold:pixelsize=11;2
-font-1 = Unifont:fontformat=truetype:size=8:antialias=false;1
-font-2 = Wuncon Siji:pixelsize=12;1
-font-3 = dcon:style=Regular:pixelsize=10:antialias=true;1
+font-0 = Noto Sans:style=Bold:pixelsize=12;2
+font-1 = CodeNewRoman Nerd Font Mono:style=Bold:pixelsize=16;4
 
-modules-left = i3
+modules-left = menu-apps i3
 modules-center = xwindow
-modules-right = date
+modules-right = date menu-power
 
 tray-position = right
 tray-padding = 12
@@ -209,3 +207,33 @@ label-low = %percentage%%
 format-low-underline = #ff0000
 
 format-full-underline = #00ff00
+
+
+
+
+
+
+
+
+[module/menu-power]
+type = custom/menu
+expand-right = false
+label-open = " 󰤆"
+label-close = 󰖭
+label-separator = "  "
+
+menu-0-0 = Sleep
+menu-0-0-exec = systemctl suspend
+menu-0-1 = Lock
+menu-0-1-exec = i3lock
+menu-0-2 = Exit
+menu-0-2-exec = i3-msg exit
+menu-0-3 = Restart
+menu-0-3-exec = systemctl reboot
+menu-0-4 = Poweroff
+menu-0-5-exec = poweroff
+
+[module/menu-apps]
+type = custom/text
+content="  󰣇"
+click-left = "~/.bin/rofi-apps"

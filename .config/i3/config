@@ -163,7 +163,7 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.wal.jpg
 #exec_always --no-startup-id pulseaudio --start
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
-exec --no-startup-id xfce4-power-manager
+exec_always --no-startup-id xfce4-power-manager
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
