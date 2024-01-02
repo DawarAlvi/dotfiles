@@ -139,7 +139,7 @@ mode "$mode_exit" {
 
 # BORDER AND GAPS
 default_border pixel 2
-hide_edge_borders smart
+smart_borders on
 gaps inner 10
 smart_gaps on
 
@@ -164,6 +164,8 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.wal.jpg
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec_always --no-startup-id xfce4-power-manager
+exec_always --no-startup-id picom
+
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
