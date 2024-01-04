@@ -175,7 +175,8 @@ adapter = ACAD
 poll-interval = 5
 enable-scroll = true
 
-label-full = Fully charged
+label-full = 
+label-full-foreground = #00ff00
 
 label-charging = %percentage%%
 format-charging = <animation-charging> <label-charging>
@@ -194,10 +195,10 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-label-low = BATTERY LOW
-format-low = <animation-low><label-low>
-animation-low-0 = !
-animation-low-1 = 
-animation-low-framerate = 200
+animation-low-foreground = #ff0000
+format-low = <animation-low>
+animation-low-0 = 
+animation-low-1 = 
+animation-low-framerate = 250
 
 ;-------------------------------------------------;
