@@ -54,6 +54,7 @@ bindsym $mod+v split toggle
 
 # Fullscreen
 bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f focus parent; fullscreen; focus child
 
 # Tabbed
 bindsym $mod+t layout tabbed
@@ -162,7 +163,6 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.wal.jpg
 
 #exec_always --no-startup-id pulseaudio --start
 exec --no-startup-id nm-applet
-exec --no-startup-id pa-applet
 exec_always --no-startup-id xfce4-power-manager
 exec_always --no-startup-id picom
 
